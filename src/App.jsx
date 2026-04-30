@@ -1,6 +1,20 @@
+function Navbar() {
+  return (
+    <nav className="fixed w-full bg-black/70 backdrop-blur p-4 flex justify-between">
+      <h1 className="font-bold">TechMinds</h1>
+      <div className="space-x-4">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  );
+}
+
 export default function App() {
   return (
     <div className="bg-black text-white min-h-screen font-sans">
+      <Navbar />
 
       {/* HERO */}
       <section className="h-screen flex flex-col justify-center items-center text-center">
