@@ -1,122 +1,53 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
-
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
+    <div className="bg-black text-white min-h-screen font-sans">
+
+      {/* HERO */}
+      <section className="h-screen flex flex-col justify-center items-center text-center">
+        <h1 className="text-5xl font-bold">Abba</h1>
+        <p className="mt-4 text-lg text-gray-400">
+          Mechatronics Engineer + Software Developer
+        </p>
       </section>
 
-      <div className="ticks"></div>
+      {/* ABOUT */}
+      <section className="p-10 max-w-3xl mx-auto">
+        <h2 className="text-3xl font-semibold mb-4">About Me</h2>
+        <p>
+          I build intelligent systems combining hardware and software.
+          Passionate about robotics, automation, and scalable applications.
+        </p>
+      </section>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
+      {/* SKILLS */}
+      <section className="p-10 bg-gray-900">
+        <h2 className="text-3xl font-semibold mb-4">Skills</h2>
+        <ul className="grid grid-cols-2 gap-4">
+          <li>React</li>
+          <li>Python</li>
+          <li>C++</li>
+          <li>Embedded Systems</li>
+        </ul>
+      </section>
+
+      {/* PROJECTS */}
+      <section className="p-10">
+        <h2 className="text-3xl font-semibold mb-6">Projects</h2>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="bg-gray-800 p-5 rounded-xl">
+            <h3 className="text-xl font-bold">PDF to Image Converter</h3>
+            <p className="text-gray-400">Built with React + Node.js</p>
+          </div>
         </div>
       </section>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+      {/* CONTACT */}
+      <section className="p-10 text-center">
+        <h2 className="text-3xl font-semibold mb-4">Contact</h2>
+        <p>Email: gamaabba7@gmail.com</p>
+      </section>
+
+    </div>
+  );
 }
-
-export default App
